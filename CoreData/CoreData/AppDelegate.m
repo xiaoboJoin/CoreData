@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    Person *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.managedObjectContext];
+    person.name = @"阿虎";
+    person.age = [NSNumber numberWithInt:18];
+
+    NSError *error = nil;
+    BOOL isSave =   [self.managedObjectContext save:&error];
+    if (!isSave) {
+        NSLog(@"error:%@,%@",error,[error userInfo]);
+    }
+    else{
+        NSLog(@"保存成功");
+    }
+    
+    [self dataFetchRequest];
+    
     return YES;
+}
+
+
+- (void)dataFetchRequest
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects) {
+        NSLog(@"name:%@", [info valueForKey:@"name"]);
+        NSLog(@"age:%@", [info valueForKey:@"age"]);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

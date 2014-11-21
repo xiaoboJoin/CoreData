@@ -15,6 +15,7 @@
 		B3BEF3691A1F2FFE00D5D92A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3BEF3681A1F2FFE00D5D92A /* Images.xcassets */; };
 		B3BEF36C1A1F2FFE00D5D92A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3BEF36A1A1F2FFE00D5D92A /* LaunchScreen.xib */; };
 		B3BEF3781A1F2FFE00D5D92A /* CoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BEF3771A1F2FFE00D5D92A /* CoreDataTests.m */; };
+		B3BEF3831A1F324C00D5D92A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BEF3821A1F324C00D5D92A /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		B3BEF3711A1F2FFE00D5D92A /* CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BEF3761A1F2FFE00D5D92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3BEF3771A1F2FFE00D5D92A /* CoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTests.m; sourceTree = "<group>"; };
+		B3BEF3811A1F324C00D5D92A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		B3BEF3821A1F324C00D5D92A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				B3BEF3681A1F2FFE00D5D92A /* Images.xcassets */,
 				B3BEF36A1A1F2FFE00D5D92A /* LaunchScreen.xib */,
 				B3BEF35F1A1F2FFE00D5D92A /* CoreData.xcdatamodeld */,
+				B3BEF3811A1F324C00D5D92A /* Person.h */,
+				B3BEF3821A1F324C00D5D92A /* Person.m */,
 				B3BEF3581A1F2FFD00D5D92A /* Supporting Files */,
 			);
 			path = CoreData;
@@ -224,6 +229,7 @@
 			files = (
 				B3BEF35E1A1F2FFE00D5D92A /* AppDelegate.m in Sources */,
 				B3BEF35B1A1F2FFD00D5D92A /* main.m in Sources */,
+				B3BEF3831A1F324C00D5D92A /* Person.m in Sources */,
 				B3BEF3641A1F2FFE00D5D92A /* ViewController.m in Sources */,
 				B3BEF3611A1F2FFE00D5D92A /* CoreData.xcdatamodeld in Sources */,
 			);
